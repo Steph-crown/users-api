@@ -1,27 +1,17 @@
 var express = require('express');
 var router = express.Router();
 
-// Get users
-router.get('/users', (req, res) => {
-  res.send('faag')
-})
+// Get all users
+router.get('/users', require('./../controllers/getUsers'))
 
-// Post /user
-router.post('/user', (req, res, next) => {
-  res.send("post user")
-})
+// Create a new user
+router.post('/user', require('./../controllers/postUser'))
 
 /* Route /user/:id. */
 router.route('/user/:id')
-  .get((req, res, next) => {
-  res.send(req.params.id);
-})
-  .patch((req, res, next) => {
-    res.send(req.params.id + "patch")
-  })
-  .delete((req, res) => {
-    res.send(req.params.id + "delete")
-  })
+  .get(require('./../controllers/getUserById'))
+  .patch(require('./../controllers/patchUserById'))
+  .delete(require('./../controllers/deleteUserById'))
 
 
 

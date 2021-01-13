@@ -8,12 +8,17 @@ var apiRouter = require('./routes/api');
 
 var app = express();
 
+// Makes a connection to the database
+const connection = require('./models');
+const cors = require('cors');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors())
 
+// Handles routing
 app.use('/api', apiRouter);
 
 // // catch 404 and forward to error handler

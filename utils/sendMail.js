@@ -11,7 +11,7 @@ module.exports = async function(mailData) {
   }); 
 
   var mailOptions = {
-    from: '"Steph Crown" <emmanuelstephen024@gmail.com>',
+    from: '"Steph Crown" <stephtechnologies8@gmail.com>',
     to: mailData.email,
     subject: mailData.subject,
     html: mailData.body

@@ -3,7 +3,7 @@ const User = require('./../models/users')
 module.exports = (req, res) => {
     User.find((err, data) => {
         if (err) {
-            res.status(502).json({
+            res.status(400).json({
                 error: "Error fetching data" + err
             })
         } else {
@@ -11,6 +11,5 @@ module.exports = (req, res) => {
                 data
             })
         }
-        
     })
 };

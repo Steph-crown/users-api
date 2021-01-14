@@ -13,7 +13,7 @@ var app = express();
 const connection = require('./models');
 const cors = require('cors');
 
-app.use(morgan("combined", { stream: logger.stream.write }));
+app.use(morgan("combined", { stream: logger.stream }));
 
 
 
@@ -26,9 +26,10 @@ app.use(cors())
 // Handles routing
 app.use('/api', apiRouter);
 
+// Cathes error and logs it to ./logs/error.log
 app.use(function(err, req, res, next) {
-  logger.error(`${req.method} - ${err.message}  - ${req.originalUrl} - ${req.ip}`);
-  next(err)
+  logger.log('error', ` ${req.ip} - - [${new Date().toLocaleString()}] "${req.method} ${req.originalUrl} - ${err.message} -\n`);
+  next()
 })  
 
 // // catch 404 and forward to error handler

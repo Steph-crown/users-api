@@ -1,25 +1,61 @@
 const winston = require('winston');
+const {format, createLogger, transports} = winston;
+// define the custom settings for each transport (file, console)
+var options = {
+    infoFile: {
+        level: 'info',
+        filename: `./logs/info.log`,
+        handleExceptions: true,
+        maxsize: 5242880, // 5MB
+        maxFiles: 5,
+        format: format.combine(
+            format.prettyPrint(),
+            format.simple(),
+            format.colorize()
+        )
+    },
+    errorFile: {
+        level: 'error',
+        filename: `./logs/error.log`,
+        handleExceptions: true,
+        maxsize: 5242880, // 5MB
+        maxFiles: 5,
+        format: format.combine(
+            format.prettyPrint(),
+            format.simple(),
+            format.colorize()
+        )
+    },
+    console: {
+      level: 'debug',
+      handleExceptions: true,
+      colorize: true,
+      format: format.combine(
+        format.prettyPrint(),
+        format.simple(),
+        format.colorize()
+    )
+    },
+};
 
-// creates a new Winston Logger
-const logger = new winston.createLogger({
-  level: 'http',
-  transports: [
-    new winston.transports.File({ filename: './logs/error.log', level: 'error'}),
-    new winston.transports.File({ filename: 'logs/info.log', level: 'info'}),
-    new winston.transports.File({ filename:'./logs/http.log', level: 'http'})
-  ],
-  exitOnError: false
+
+// instantiate a new Winston Logger with the settings defined above
+var logger = new createLogger({
+    transports: [
+        new transports.File(options.infoFile),
+        new transports.File(options.errorFile),
+        new transports.Console(options.console)
+    ],
+    exitOnError: false, // do not exit on handled exceptions
 });
 
 
-
-// If we're not in production then log to the `console` with the format:
-// `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
-//
-if (process.env.NODE_ENV !== 'production') {
-    logger.add(new winston.transports.Console({
-      format: winston.format.simple(),
-    }));
-  }
-
-module.exports = logger;
+// create a stream object with a 'write' function that will be used by `morgan`
+logger.stream = {
+    write: function(message, encoding) {
+      // use the 'info' log level so the output will be picked up by both transports (file and console)
+      logger.info(message);
+    },
+  };
+  
+  module.exports = logger;

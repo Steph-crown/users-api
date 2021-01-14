@@ -1,1 +1,4 @@
-{"message":"GET - Yoooo errrorrorroro  - /api/users - ::1","level":"error"}
+error:  ::1 - - [1/14/2021, 3:57:38 PM] "GET /api/users - Yoooo errrorrorroro -
+
+info: ::1 - - [14/Jan/2021:14:57:39 +0000] "GET /api/users HTTP/1.1" 404 148 "-" "PostmanRuntime/7.26.8"
+

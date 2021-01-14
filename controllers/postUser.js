@@ -25,7 +25,7 @@ module.exports = (req, res, next) => {
   newUser.save((err, data) => {
     if (err) {
       res.status(400).json({
-        error:  err
+        error:  err.message
       })
     } else {
       sendMail({

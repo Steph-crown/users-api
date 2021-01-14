@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
     Users.findOne({id: id}, (err, data) => {
         if (!data) {
             res.status(406).json({
-                error: `User with id '${id}' not found`
+                error: `User with id ${id} not found`
             })
         } else {
             res.status(200).json({

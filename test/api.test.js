@@ -50,11 +50,11 @@ describe('APIs', () => {
                 .end((err, data) => {
                     data.should.have.status(201);
                     data.body.should.be.a('object');
-                    data.body.should.have.property('firstname').eq(user.firstname);
-                    data.body.should.have.property('lastname').eq(user.lastname);
-                    data.body.should.have.property('email').eq(user.email);
-                    data.body.should.have.property('mobile').eq(user.mobile);
-                    data.body.should.have.property('id');
+                    data.body.data.should.have.property('firstname').eq(user.firstname);
+                    data.body.data.should.have.property('lastname').eq(user.lastname);
+                    data.body.data.should.have.property('email').eq(user.email);
+                    data.body.data.should.have.property('mobile').eq(user.mobile);
+                    data.body.data.should.have.property('id');
                     done();
                 })
         });
@@ -101,34 +101,103 @@ describe('APIs', () => {
       */
     describe('Test GET route /api/user/:id', () => {
         it('It should get user by id ', (done) => {
-            let validId = "stdufkcwf5f";
+            let validId = "194cugazfqu";
             chai.request(api)
                 .get('/api/user/' + validId)
                 .end((err, data) => {
                     data.should.have.status(200);
-                    data.body.should.be.a('object');
-                    data.body.should.have.property('id').eq(validId);
-                    data.body.should.have.property('firstname');
-                    data.body.should.have.property('lastname');
-                    data.body.should.have.property('email');
-                    data.body.should.have.property('mobile');
+                    data.body.data.should.be.a('object');
+                    data.body.data.should.have.property('id').eq(validId);
+                    data.body.data.should.have.property('firstname');
+                    data.body.data.should.have.property('lastname');
+                    data.body.data.should.have.property('email');
+                    data.body.data.should.have.property('mobile');
+                    done();
                 })
         });
 
         it('It should not get user by id because of wrong ID', (done) => {
-            let validId = "stdufkcwfi5f";
+            let invalidId = "stdufkcwfio5f";
             chai.request(api)
-                .get('/api/user/' + validId)
+                .get('/api/user/' + invalidId)
                 .end((err, data) => {
                     data.should.have.status(406);
                     data.body.should.be.a('object');
-                    data.body.should.have.property('error').eq(`User with id ${validId} not found`);
+                    data.body.should.have.property('error').eq(`User with id ${invalidId} not found`);
+                    done();
                 })
         });
+
+
         
     })
     
 
 
+    /**
+      * Test PATCH /api/user/:id
+      */
+     describe('Test PATCH route /api/user/:id', () => {
+        it('It should patch user by id ', (done) => {
+            let validId = "194cugazfqu";
+            chai.request(api)
+                .patch('/api/user/' + validId)
+                .end((err, data) => {
+                    data.should.have.status(200);
+                    data.body.should.be.a('object');
+                    data.body.data.should.have.property('id').eq(validId);
+                    done();
+                })
+        });
 
+        it('It should not patch user by id because of wrong ID', (done) => {
+            let invalidId = "stdufkcwfio5f";
+            chai.request(api)
+                .patch('/api/user/' + invalidId)
+                .end((err, data) => {
+                    data.should.have.status(406);
+                    data.body.should.be.a('object');
+                    data.body.should.have.property('error').eq(`User with id ${invalidId} not found`);
+                    done();
+                })
+        });
+
+        
+        
+    })
+    
+
+
+    /**
+      * Test DELETE /api/user/:id
+      */
+     describe('Test DELETE route /api/user/:id', () => {
+        it('It should patch user by id ', (done) => {
+            let validId = "194cugazfqu";
+            chai.request(api)
+                .delete('/api/user/' + validId)
+                .end((err, data) => {
+                    data.should.have.status(200);
+                    data.body.should.be.a('object');
+                    data.body.data.should.have.property('id').eq(validId);
+                    done();
+                })
+        });
+
+        it('It should not DELETE user by id because of wrong ID', (done) => {
+            let invalidId = "stdufkcwfio5f";
+            chai.request(api)
+                .delete('/api/user/' + invalidId)
+                .end((err, data) => {
+                    data.should.have.status(406);
+                    data.body.should.be.a('object');
+                    data.body.should.have.property('error').eq(`Data with id ${invalidId} not found `);
+                    done();
+                })
+        });
+
+        
+        
+    })
+    
 });

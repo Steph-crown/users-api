@@ -24,7 +24,7 @@ module.exports = (req, res) => {
         });
       } else {
         res.status(406).json({
-          error: `Data with id '${req.params.id}' not found `
+          error: `Data with id ${req.params.id} not found `
         });
       }
     })

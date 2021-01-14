@@ -26,6 +26,7 @@ module.exports = (req, res) => {
         res.status(406).json({
           error: `Data with id ${req.params.id} not found `
         });
+        throw new Error(`Data with id ${req.params.id} not found `)
       }
     })
 };

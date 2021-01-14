@@ -1,8 +1,0 @@
-error:  ::1 - - [Thu Jan 14 2021 15:54:58 GMT+0100 (West Africa Standard Time)] "GET /api/users - $ -
-
-error:  ::1 - - [Thu Jan 14 2021 15:56:20 GMT+0100 (West Africa Standard Time)] "GET /api/users - Yoooo errrorrorroro -
-
-error:  ::1 - - [1/14/2021, 3:56:57 PM] "GET /api/users - name argument is required to req.get -
-
-error:  ::1 - - [1/14/2021, 3:57:38 PM] "GET /api/users - Yoooo errrorrorroro -
-

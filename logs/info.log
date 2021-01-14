@@ -1,4 +1,16 @@
-error:  ::1 - - [1/14/2021, 3:57:38 PM] "GET /api/users - Yoooo errrorrorroro -
+info: ::1 - - [14/Jan/2021:15:15:39 +0000] "PATCH /api/user/gysb6msfr8 HTTP/1.1" 406 45 "-" "PostmanRuntime/7.26.8"
 
-info: ::1 - - [14/Jan/2021:14:57:39 +0000] "GET /api/users HTTP/1.1" 404 148 "-" "PostmanRuntime/7.26.8"
+info: ::1 - - [14/Jan/2021:15:16:47 +0000] "PATCH /api/user/gysb6msfr8d HTTP/1.1" 200 170 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [14/Jan/2021:15:18:37 +0000] "PATCH /api/user/gysb6msfr8 HTTP/1.1" 406 45 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [14/Jan/2021:15:20:36 +0000] "PATCH /api/user/gysb6msfr8 HTTP/1.1" 406 45 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [14/Jan/2021:15:21:06 +0000] "PATCH /api/user/gysb6msfr8 HTTP/1.1" 406 45 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [14/Jan/2021:15:22:58 +0000] "PATCH /api/user/gysb6msfr8 HTTP/1.1" 406 45 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [14/Jan/2021:15:24:37 +0000] "PATCH /api/user/gysb6msfr8 HTTP/1.1" 406 45 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [14/Jan/2021:15:25:05 +0000] "PATCH /api/user/gysb6msfr8 HTTP/1.1" 406 45 "-" "PostmanRuntime/7.26.8"
 

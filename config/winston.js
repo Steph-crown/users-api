@@ -5,7 +5,7 @@ var options = {
     infoFile: {
         level: 'info',
         filename: `./logs/info.log`,
-        handleExceptions: true,
+        handleExceptions: false,
         maxsize: 5242880, // 5MB
         maxFiles: 5,
         format: format.combine(
@@ -25,17 +25,7 @@ var options = {
             format.simple(),
             format.colorize()
         )
-    },
-    console: {
-      level: 'debug',
-      handleExceptions: true,
-      colorize: true,
-      format: format.combine(
-        format.prettyPrint(),
-        format.simple(),
-        format.colorize()
-    )
-    },
+    }
 };
 
 
@@ -44,7 +34,7 @@ var logger = new createLogger({
     transports: [
         new transports.File(options.infoFile),
         new transports.File(options.errorFile),
-        new transports.Console(options.console)
+        new transports.Console(options.infoFile)
     ],
     exitOnError: false, // do not exit on handled exceptions
 });

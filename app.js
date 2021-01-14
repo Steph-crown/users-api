@@ -28,7 +28,7 @@ app.use('/api', apiRouter);
 
 // Cathes error and logs it to ./logs/error.log
 app.use(function(err, req, res, next) {
-  logger.log('error', ` ${req.ip} - - [${new Date().toLocaleString()}] "${req.method} ${req.originalUrl} - ${err.message} -\n`);
+  logger('error',` ${req.ip} - - [${new Date().toLocaleString()}] "${req.method} ${req.originalUrl} - ${err.message} -\n`);
   next()
 })  
 

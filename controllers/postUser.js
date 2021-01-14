@@ -24,6 +24,7 @@ module.exports = (req, res, next) => {
 
   newUser.save((err, data) => {
     if (err) {
+      throw new Error("Error Saving User")
       res.status(400).json({
         error:  err.message
       })

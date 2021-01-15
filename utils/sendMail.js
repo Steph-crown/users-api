@@ -5,7 +5,7 @@ module.exports = async function(mailData) {
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'stephtechnologies8@gmail.com',
+      user: 'emmanuelstephen024@@gmail.com',
       pass: process.env.PASSWORD
     }
   }); 

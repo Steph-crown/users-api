@@ -14,3 +14,21 @@ info: ::1 - - [14/Jan/2021:15:24:37 +0000] "PATCH /api/user/gysb6msfr8 HTTP/1.1"
 
 info: ::1 - - [14/Jan/2021:15:25:05 +0000] "PATCH /api/user/gysb6msfr8 HTTP/1.1" 406 45 "-" "PostmanRuntime/7.26.8"
 
+info: ::1 - - [14/Jan/2021:16:12:03 +0000] "POST /api/user/ HTTP/1.1" 201 170 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [14/Jan/2021:16:15:27 +0000] "DELETE /api/user/p7xvv2lg6ao HTTP/1.1" 200 170 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [15/Jan/2021:12:20:59 +0000] "GET /api/users HTTP/1.1" 200 2804 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [15/Jan/2021:12:21:27 +0000] "POST /api/user HTTP/1.1" 201 170 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [15/Jan/2021:12:23:15 +0000] "GET /api/user/fopcutbqri5 HTTP/1.1" 200 170 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [15/Jan/2021:12:23:51 +0000] "PATCH /api/user/fopcutbqri5 HTTP/1.1" 200 171 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [15/Jan/2021:12:23:57 +0000] "GET /api/user/fopcutbqri5 HTTP/1.1" 200 171 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [15/Jan/2021:12:24:40 +0000] "DELETE /api/user/fopcutbqri5 HTTP/1.1" 200 171 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [15/Jan/2021:12:25:06 +0000] "GET /api/user/fopcutbqri5 HTTP/1.1" 406 46 "-" "PostmanRuntime/7.26.8"
+

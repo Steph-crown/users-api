@@ -10,7 +10,7 @@ module.exports = (req, res, next) => {
             res.status(406).json({
                 error: `User with id ${id} not found`
             })
-            throw new Error(`User with id ${id} not found`)
+            // throw new Error(`User with id ${id} not found`)
 
         } else {
             res.status(200).json({

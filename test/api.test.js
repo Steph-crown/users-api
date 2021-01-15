@@ -101,7 +101,7 @@ describe('APIs', () => {
       */
     describe('Test GET route /api/user/:id', () => {
         it('It should get user by id ', (done) => {
-            let validId = "194cugazfqu";
+            let validId = "gysb6msfr8d";
             chai.request(api)
                 .get('/api/user/' + validId)
                 .end((err, data) => {
@@ -139,7 +139,7 @@ describe('APIs', () => {
       */
      describe('Test PATCH route /api/user/:id', () => {
         it('It should patch user by id ', (done) => {
-            let validId = "194cugazfqu";
+            let validId = "gysb6msfr8d";
             chai.request(api)
                 .patch('/api/user/' + validId)
                 .end((err, data) => {
@@ -173,7 +173,7 @@ describe('APIs', () => {
       */
      describe('Test DELETE route /api/user/:id', () => {
         it('It should patch user by id ', (done) => {
-            let validId = "194cugazfqu";
+            let validId = "gysb6msfr8d";
             chai.request(api)
                 .delete('/api/user/' + validId)
                 .end((err, data) => {

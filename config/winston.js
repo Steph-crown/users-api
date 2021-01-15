@@ -13,18 +13,6 @@ var options = {
             format.simple(),
             format.colorize()
         )
-    },
-    errorFile: {
-        level: 'error',
-        filename: `./logs/error.log`,
-        handleExceptions: true,
-        maxsize: 5242880, // 5MB
-        maxFiles: 5,
-        format: format.combine(
-            format.prettyPrint(),
-            format.simple(),
-            format.colorize()
-        )
     }
 };
 
@@ -33,7 +21,6 @@ var options = {
 var logger = new createLogger({
     transports: [
         new transports.File(options.infoFile),
-        new transports.File(options.errorFile),
         new transports.Console(options.infoFile)
     ],
     exitOnError: false, // do not exit on handled exceptions

@@ -3,11 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var morgan = require('morgan');
-const logger = require('./config/winston')
+const logger = require('./config/winston');
+const compression = require('compression');
 
 var apiRouter = require('./routes/api');
 
 var app = express();
+app.use(compression()); //Compress all routes
+
 
 // Makes a connection to the database
 const connection = require('./models');

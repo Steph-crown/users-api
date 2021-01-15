@@ -8,7 +8,7 @@ var localhostUrl = 'mongodb://localhost:27017/users';
 
 var mongoDB = process.env.MONGODB_URI || localhostUrl;
 
-mongoose.connect(localhostUrl, { useNewUrlParser: true })
+mongoose.connect(mongoDB, { useNewUrlParser: true })
   .catch(err => console.log(err));
 
 

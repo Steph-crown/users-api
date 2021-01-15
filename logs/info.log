@@ -6,3 +6,19 @@ info: ::1 - - [15/Jan/2021:13:10:51 +0000] "GET /api/user/hrxj0jo33 HTTP/1.1" 40
 
 info: ::1 - - [15/Jan/2021:13:11:23 +0000] "GET /api/user/hrxj0jo33 HTTP/1.1" 406 44 "-" "PostmanRuntime/7.26.8"
 
+info: ::1 - - [15/Jan/2021:13:21:50 +0000] "GET /api/user/hrxj0jo33e HTTP/1.1" 200 173 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [15/Jan/2021:13:23:04 +0000] "GET /api/user/hrxj0jo33e HTTP/1.1" 200 173 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [15/Jan/2021:13:23:32 +0000] "POST /api/user/ HTTP/1.1" 201 171 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [15/Jan/2021:13:41:33 +0000] "POST /api/user/ HTTP/1.1" 201 170 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [15/Jan/2021:13:41:49 +0000] "GET /api/user/m2kkfkqm3q HTTP/1.1" 200 170 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [15/Jan/2021:13:42:10 +0000] "GET /api/user/m2kkfkqm3 HTTP/1.1" 406 44 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [15/Jan/2021:13:45:49 +0000] "GET /api/user/m2kkfkqm3q HTTP/1.1" 200 170 "-" "PostmanRuntime/7.26.8"
+
+info: ::1 - - [15/Jan/2021:13:45:56 +0000] "GET /api/user/m2kkfkqm3q HTTP/1.1" 200 170 "-" "PostmanRuntime/7.26.8"
+
